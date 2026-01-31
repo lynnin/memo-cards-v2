@@ -55,6 +55,15 @@ button {
   margin: 0.6em 0;
 }
 
+.memo-text {
+  white-space: pre-wrap;   /* 保留换行与缩进 */
+  font-family: serif;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+
 #card li {
   margin: 0.3em 0;
 }
