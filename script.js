@@ -17,11 +17,13 @@ const allBtn = document.getElementById("allBtn");
 const addBtn = document.getElementById("addBtn");
 
 /***** Helpers *****/
+// 这是你的 Markdown 解析函数
 function renderMarkdown(text) {
-  return `<pre class="memo-text">${text}</pre>`;
+  return marked.parse(text);
 }
 
 function showCard(markdownText) {
+  // 使用 innerHTML 来确保 Markdown 转换的 HTML 渲染正确
   card.innerHTML = renderMarkdown(markdownText);
   panel.innerHTML = "";
 }
