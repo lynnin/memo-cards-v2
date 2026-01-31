@@ -1,24 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="UTF-8" />
-  <title>Memo Cards</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Memo Cards v2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      max-width: 640px;
+      margin: 40px auto;
+      padding: 0 16px;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 120px;
+      font-size: 16px;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 8px;
+      padding: 8px 12px;
+      font-size: 16px;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      padding: 12px;
+      margin-top: 12px;
+      white-space: pre-wrap;
+    }
+  </style>
 </head>
+
 <body>
+  <h1>Memo Cards</h1>
 
-  <main>
-    <div id="card">Loading…</div>
+  <textarea id="memoInput" placeholder="写下一段 memo…"></textarea>
+  <br />
+  <button id="addBtn">Add</button>
 
-    <div class="buttons">
-      <button id="randomBtn">Random</button>
-      <button id="allBtn">All</button>
-      <button id="addBtn">Add</button>
-    </div>
+  <div id="cards"></div>
 
-    <textarea id="input" placeholder="Write a memo…"></textarea>
-  </main>
-
+  <!-- 关键：只加载 script.js，一切逻辑都在里面 -->
   <script type="module" src="script.js"></script>
 </body>
 </html>
