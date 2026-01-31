@@ -12,7 +12,7 @@ const WRITE_KEY = "6d4a5fbb293f02d1ebfbb914b8eae6e7d9a0e5e6";
 
 // 🔥 Firebase 配置（从 Firebase 项目设置里复制）
 const firebaseConfig = {
-  apiKey: "你的 apiKey",
+  apiKey: "AIzaSyCjNsWPJTH5f1O4YhM1jJ32UZXvNZfmXIA",
   authDomain: "memo-cards-v2.firebaseapp.com",
   projectId: "memo-cards-v2",
 };
