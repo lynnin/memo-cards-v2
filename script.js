@@ -18,7 +18,7 @@ const addBtn = document.getElementById("addBtn");
 
 /***** Helpers *****/
 function renderMarkdown(text) {
-  return marked.parse(text);
+  return `<pre class="memo-text">${text}</pre>`;
 }
 
 function showCard(markdownText) {
