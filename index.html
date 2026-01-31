@@ -1,54 +1,34 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Memo Cards v2</title>
+  <title>Memo Cards</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      max-width: 640px;
-      margin: 40px auto;
-      padding: 0 16px;
-    }
 
-    h1 {
-      font-size: 24px;
-    }
+  <link rel="stylesheet" href="style.css" />
 
-    textarea {
-      width: 100%;
-      height: 120px;
-      font-size: 16px;
-      padding: 8px;
-      box-sizing: border-box;
-    }
+  <!-- Markdown renderer -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-    button {
-      margin-top: 8px;
-      padding: 8px 12px;
-      font-size: 16px;
-    }
-
-    .card {
-      border: 1px solid #ddd;
-      padding: 12px;
-      margin-top: 12px;
-      white-space: pre-wrap;
-    }
-  </style>
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 </head>
 
 <body>
-  <h1>Memo Cards</h1>
+  <div id="app">
+    <div id="card"></div>
 
-  <textarea id="memoInput" placeholder="写下一段 memo…"></textarea>
-  <br />
-  <button id="addBtn">Add</button>
+    <div class="buttons">
+      <button id="randomBtn">random</button>
+      <button id="allBtn">all</button>
+      <button id="addBtn">add</button>
+    </div>
 
-  <div id="cards"></div>
+    <div id="panel"></div>
+  </div>
 
-  <!-- 关键：只加载 script.js，一切逻辑都在里面 -->
-  <script type="module" src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+
